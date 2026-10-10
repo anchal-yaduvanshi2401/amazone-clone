@@ -1,12 +1,13 @@
 const express= require('express');
 const app= express();
-const PORT = process.env.PORT || 3000;
+const dotenv = require('dotenv');
+dotenv.config();
+
 const { products } = require('./data');
 console.log(products);
 const cors = require('cors');
-import dotenv from 'dotenv';
-dotenv.config();
 
+const PORT = process.env.PORT || 3000;
 
 
 app.use(cors());
